@@ -28,7 +28,7 @@ pip install Django
 Crear archivo requirements.txt (Dependencias) ejecutar cada vez que hayan cambios para actualizar.
 
 ```shell
-pip freeze > requirements.txt
+
 ```
 
 Instalar dependencias a partir del archivo requirments.txt.
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 Comando para ejecutar aplicación
 
 ```shell
-python manage.py
+python manage.py runserver
 ```
 Comando para desactivar el entorno virtual cada vez que se termine de trabajar en el proyecto
 
