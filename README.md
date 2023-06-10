@@ -42,3 +42,8 @@ Comando para ejecutar aplicación
 ```shell
 python manage.py
 ```
+Comando para desactivar el entorno virtual cada vez que se termine de trabajar en el proyecto
+
+```shell
+deactivate
+```
