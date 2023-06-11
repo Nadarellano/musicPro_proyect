@@ -47,3 +47,9 @@ Comando para desactivar el entorno virtual cada vez que se termine de trabajar e
 ```shell
 deactivate
 ```
+
+Superuser and password (admin-Django)
+
+```
+music_pro
+```
