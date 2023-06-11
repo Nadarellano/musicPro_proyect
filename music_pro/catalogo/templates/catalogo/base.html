@@ -18,19 +18,15 @@
     <header id="header">
         <img class="menu" src="{% static 'catalogo/img/menuiconwhite.png' %}" alt="menu" id="menu">
         <div class="contenedor_logo">
-            <img  class="logo"  src="{% static 'catalogo/img/tecnomarketpngicono.png' %}" alt="logo">
+            <img  class="logo"  src="{% static 'catalogo/img/logomusicPro.jpg' %}" alt="logo">
         </div>
 
         <div>
             
             <nav id="nav">
                 <ul>
-                    <li>
-                        <a href="{% url 'home' %}"> Inicio </a>
-                    </li>
-                    {% comment %} <li>
-                        <a href="contacto.html">Contacto</a>
-                    </li> {% endcomment %}
+                    <li><a href="{% url 'home' %}"> Inicio </a></li>
+                    <li><a href="{% url 'contacto' %}">Contacto</a></li> 
                     <li><a href="{% url 'galeria' %}">Galería</a></li>
                 </ul>
             </nav>
