@@ -1,30 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la página</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Catálogo</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+{% extends 'catalogo/base.html' %}
 
-    <main>
-        <h2>Contenido principal</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus libero quis mauris rhoncus dapibus.</p>
-    </main>
+{% load static %}
 
-    <footer>
-        <p>&copy; 2023 Nombre de la empresa. Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
+{% block js %}
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.slider').bxSlider({
+            mode: 'fade',//horizontal, vertical, fade
+            auto: true,
+            pause: 2000
+        });
+    });
+</script>
+
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+{% endblock %}
+
+{% block contenido %}
+
+<div class="slider">
+    <div>
+        <img src="{% static 'catalogo/img/banner/banner1.png' %}" alt="">
+    </div>
+    <div>
+        <img src="{% static 'catalogo/img/banner/banner2.png' %}" alt="">
+    </div>
+    <div>
+        <img src="{% static 'catalogo/img/banner/banner3.png' %}" alt="">
+    </div>
+</div>
+
+<h2>Productos</h2>
+<div class="productos">
+
+    <div class="producto">
+
+        <div class="contenedor_producto">
+
+            <img src="{% static 'catalogo/img/lenovo_tablet.jpeg' %}" alt="imagen producto">
+            <div class="detalle">
+                <h5>Lenovo</h5>
+                <h2>Tablet</h2>
+                <h3>$120.000</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="producto">
+
+        <div class="contenedor_producto">
+
+            <img src="{% static 'catalogo/img/macbook.jpeg' %}" alt="imagen producto">
+            <div class="detalle">
+                <h5>apple</h5>
+                <h2>Macbook</h2>
+                <h3>$1.500.000</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="producto">
+
+        <div class="contenedor_producto">
+
+            <img src="{% static 'catalogo/img/surface.jpeg' %}" alt="imagen producto">
+            <div class="detalle">
+                <h5>microsoft</h5>
+                <h2>Surface</h2>
+                <h3>$2.000.000</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="producto">
+
+        <div class="contenedor_producto">
+
+            <img src="{% static 'catalogo/img/s9.jpeg' %}" alt="imagen producto">
+            <div class="detalle">
+                <h5>samsung</h5>
+                <h2>Galaxy s9</h2>
+                <h3>$400.000</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="producto">
+
+        <div class="contenedor_producto">
+
+            <img src="{% static 'catalogo/img/redmi.jpeg' %}" alt="imagen producto">
+            <div class="detalle">
+                <h5>Xiaomi</h5>
+                <h2>Redmi note 8</h2>
+                <h3>$200.000</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}
