@@ -34,84 +34,26 @@
         <img src="{% static 'catalogo/img/banner/banner3.png' %}" alt="">
     </div>
 </div>
-
+{% load humanize %}
 <h2>Productos</h2>
 <div class="productos">
-
+    {% for p in productos %}
     <div class="producto">
 
         <div class="contenedor_producto">
-
-            <img src="{% static 'catalogo/img/lenovo_tablet.jpeg' %}" alt="imagen producto">
+            {% if p.imagen %}
+            <img src="{{ p.imagen.url }}" alt="imagen producto">
+            {% endif %}
             <div class="detalle">
-                <h5>Lenovo</h5>
-                <h2>Tablet</h2>
-                <h3>$120.000</h3>
+                <h5>{{ p.marca | capfirst }}</h5>
+                <h2>{{ p.nombre | title }}</h2>
+                <h3>${{ p.precio | intcomma }}</h3>
             </div>
 
         </div>
 
     </div>
-
-    <div class="producto">
-
-        <div class="contenedor_producto">
-
-            <img src="{% static 'catalogo/img/macbook.jpeg' %}" alt="imagen producto">
-            <div class="detalle">
-                <h5>apple</h5>
-                <h2>Macbook</h2>
-                <h3>$1.500.000</h3>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="producto">
-
-        <div class="contenedor_producto">
-
-            <img src="{% static 'catalogo/img/surface.jpeg' %}" alt="imagen producto">
-            <div class="detalle">
-                <h5>microsoft</h5>
-                <h2>Surface</h2>
-                <h3>$2.000.000</h3>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="producto">
-
-        <div class="contenedor_producto">
-
-            <img src="{% static 'catalogo/img/s9.jpeg' %}" alt="imagen producto">
-            <div class="detalle">
-                <h5>samsung</h5>
-                <h2>Galaxy s9</h2>
-                <h3>$400.000</h3>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="producto">
-
-        <div class="contenedor_producto">
-
-            <img src="{% static 'catalogo/img/redmi.jpeg' %}" alt="imagen producto">
-            <div class="detalle">
-                <h5>Xiaomi</h5>
-                <h2>Redmi note 8</h2>
-                <h3>$200.000</h3>
-            </div>
-
-        </div>
-
-    </div>
+    {% endfor %}
 
 
 </div>
