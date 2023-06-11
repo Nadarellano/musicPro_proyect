@@ -13,6 +13,7 @@ class Producto(models.Model):
     descripcion = models.TextField()
     precio = models.IntegerField()
     marca = models.ForeignKey(Marca, on_delete=models.PROTECT)
+    imagen = models.ImageField(upload_to="productos", null=True)
 
     def __str__(self):
         return self.nombre
