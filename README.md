@@ -28,7 +28,7 @@ pip install Django
 Crear archivo requirements.txt (Dependencias) ejecutar cada vez que hayan cambios para actualizar.
 
 ```shell
-
+pip freeze > requirements.txt
 ```
 
 Instalar dependencias a partir del archivo requirments.txt.
