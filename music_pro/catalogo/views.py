@@ -20,7 +20,7 @@ def contacto(request):
         'form': ContactoForm()
     }
 
-    if request.method == 'POST':
+    if request.method == "POST":
         formulario = ContactoForm(data=request.POST)
         if formulario.is_valid():
             formulario.save()
