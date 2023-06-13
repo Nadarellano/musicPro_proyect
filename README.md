@@ -48,6 +48,12 @@ Comando para desactivar el entorno virtual cada vez que se termine de trabajar e
 deactivate
 ```
 
+Comando para instalar bootstrap5
+
+```shell
+pip install django-bootstrap5
+```
+
 Superuser and password (admin-Django)
 
 ```
