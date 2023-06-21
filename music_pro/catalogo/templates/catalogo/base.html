@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnomarket</title>
+    <title>MusicPro</title>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
     
     {% load static %}
@@ -56,7 +56,7 @@
             <img src="{% static 'catalogo/img/footer/xiaomi.png' %}" alt="xiaomi">
         </div>
         <div class="logo_footer">
-            <img src="{% static 'catalogo/img/tecnomarketpngicono.png' %}" alt="logo">
+            <img src="{% static 'catalogo/img/logomusicPro.jpg' %}" alt="logo">
         </div>
     </footer>
 
@@ -64,7 +64,19 @@
 
     <script src="{% static 'catalogo/js/menu.js' %}"></script>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {% if messages %}
+        {% for m in messages %}
+            <script>
+                Swal.fire({
+                    "title": "Confirmación exitosa",
+                    "text": "{{m}}",
+                    "icon": "success"
+                })
+            </script>
+        {% endfor %}
+    {% endif %}    
     {% block js %}
     {% endblock %}
 
