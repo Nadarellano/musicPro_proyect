@@ -46,9 +46,8 @@ def agregar_producto(request):
         formulario = ProductoForm(data=request.POST, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
-            data["mensaje"] = "Guardado correctamente"
-        else:
-            data["form"] = formulario
+            messages.success(request, "Guardado correctamente")
+        data["form"] = formulario
 
     return render(request, 'catalogo/producto/agregar.html', data)
 
