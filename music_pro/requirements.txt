@@ -6,3 +6,4 @@ typing_extensions==4.6.3
 tzdata==2023.3
 pillow
 django-crispy-forms
+django-rest-framework
