@@ -25,7 +25,7 @@ class ProductoViewset(viewsets.ModelViewSet):
         nombre = self.request.GET.get('nombre')
 
         if nombre:
-            productos = productos.filter(nombre__contains=nombre)
+            productos = productos.filter(nombre__contains=nombre)#nombre__contains
 
         return productos
 
