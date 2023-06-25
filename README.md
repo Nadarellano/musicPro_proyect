@@ -59,3 +59,10 @@ Superuser and password (admin-Django)
 ```
 music_pro
 ```
+
+Instalar cors (Permite acceso de front-end React)
+```shell
+python -m pip install django-cors-headers / (https://stackoverflow.com/questions/35760943/how-can-i-enable-cors-on-django-rest-framework)
+```
+
+
