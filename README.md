@@ -1,5 +1,11 @@
-# musicPro_proyect
-Prueba3 / Examen "Integración de Plataformas"
+### 🌐 MusicPro – Página web Instrumentos Musicales
+
+MusicPro es una página web de ventas de instrumentos musicales con sistema de pago **transbank integrado**.
+
+**Tecnologías utilizadas:**
+- Django, JS, Bootstrap
+
+---
 
 Comando para instalar lib entorno virtual.
 
